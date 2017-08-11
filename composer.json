@@ -1,6 +1,5 @@
 {
     "name": "bubb/correios",
-    "version": "0.0.1",
     "type": "library",
     "description": "Integração com Web Service do Correios. Faz cotação e rastreamento de objetos.",
     "keywords": ["correios"],
@@ -24,5 +23,5 @@
             "email": "lucas@bubb.com.b"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
