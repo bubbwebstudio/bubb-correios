@@ -1,10 +1,10 @@
 <?php
 
-namespace BUBB\Installments;
+namespace BUBB\Correios\Exceptions;
 
 use Exception;
 
-class InstallmentsException extends Exception
+class CorreiosQuoteException extends Exception
 {
 
 	public function __construct($message)

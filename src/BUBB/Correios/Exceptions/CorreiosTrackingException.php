@@ -1,6 +1,6 @@
 <?php
 
-namespace BUBB\Installments;
+namespace BUBB\Correios\Exceptions;
 
 use Exception;
 

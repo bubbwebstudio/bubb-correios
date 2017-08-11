@@ -21,6 +21,40 @@ Adicione em seu composer.json
 
 #### **Usage**
 
+##### Cotação
+
+```php
+use BUBB\Correios\CorreiosQuote;
+use BUBB\Correios\Exceptions\CorreiosQuoteException;
+
+try
+{
+    $quotes = new CorreiosQuote();
+
+    $quotes->setOriginZipcode(14940000);
+    $quotes->setDestinyZipcode(14900000);
+    $quotes->setWeight(2);
+    $quotes->setWidth(15);
+    $quotes->setHeight(10);
+    $quotes->setLength(16);
+    $quotes->setServicesCodes(['4014', '4510']);
+    $quotes->setFormat('caixa');
+
+    // Métodos opcionais
+    $quotes->setCompanyCode('00000000'); // Código da empresa
+    $quotes->setPassword('00000000'); // Senha webserivce
+    $quotes->setDiameter(0);
+    $quotes->setMaoPropria(true);
+    $quotes->setValorDeclarado(12.0);
+
+    echo '<pre>' . json_encode($quotes->get(), true) . '</pre>';
+
+} catch ( CorreiosQuoteException $e )
+{
+    echo $e->getMessage();
+}
+```
+
 ##### Rastrear objetos
 
 ```php
