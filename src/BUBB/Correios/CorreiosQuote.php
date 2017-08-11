@@ -296,7 +296,7 @@ class CorreiosQuote
 				{
 					array_push($quotes, [
 					  'price' => (float) str_replace(',','.', $quote['Valor']),
-					  'delivery_time' => (int) $quote['PrazoEntrega'],
+					  'delivery_days' => (int) $quote['PrazoEntrega'],
 					  'estimate_delivery_date' => Carbon::now()->addWeekdays($quote['PrazoEntrega'])->format('Y-m-d'),
 					  'code' => $quote['Codigo'],
 					  'weight' => $this->getWeight(),

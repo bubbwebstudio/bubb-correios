@@ -61,7 +61,7 @@ Output:
 [
     {
         "price": 29.2,
-        "delivery_time": 2,
+        "delivery_days": 2,
         "estimate_delivery_date": "2017-08-15",
         "code": 4014,
         "weight": 2,
@@ -72,7 +72,7 @@ Output:
     },
     {
         "price": 25.8,
-        "delivery_time": 5,
+        "delivery_days": 5,
         "estimate_delivery_date": "2017-08-18",
         "code": 4510,
         "weight": 2,
