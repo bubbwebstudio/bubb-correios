@@ -1,5 +1,5 @@
 {
-    "name": "bubb/correios",
+    "name": "bubb/bubb-correios",
     "type": "library",
     "description": "Integração com Web Service do Correios. Faz cotação e rastreamento de objetos.",
     "keywords": ["correios"],
