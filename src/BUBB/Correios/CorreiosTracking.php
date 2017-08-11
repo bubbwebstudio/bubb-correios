@@ -83,7 +83,7 @@ class CorreiosTracking
 			        return [
 			            'timestamp' => Carbon::createFromFormat('d/m/Y H:i', $key['date'])->timestamp,
 			            'date' => Carbon::createFromFormat('d/m/Y H:i', $key['date'])->format('Y-m-d H:i'),
-			            'place' => $key['locale'],
+			            'locale' => $key['locale'],
 			            'status' => $key['status'],
 			            'forwarded' => isset($key['encaminhado']) ? $key['encaminhado'] : null,
 			            'delivered' => $key['status'] == 'Entrega Efetuada'
