@@ -31,8 +31,8 @@ try
 {
     $quotes = new CorreiosQuote();
 
-    $quotes->setOriginZipcode(14940000);
-    $quotes->setDestinyZipcode(14900000);
+    $quotes->setOriginZipcode('14940-000');
+    $quotes->setDestinyZipcode('14900-000');
     $quotes->setWeight(2);
     $quotes->setWidth(15);
     $quotes->setHeight(10);
