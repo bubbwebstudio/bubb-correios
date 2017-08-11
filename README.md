@@ -55,7 +55,7 @@ try
 }
 ```
 
-
+Output:
 
 ```php
 [
