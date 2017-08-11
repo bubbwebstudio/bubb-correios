@@ -55,6 +55,35 @@ try
 }
 ```
 
+
+
+```php
+[
+    {
+        "price": 29.2,
+        "delivery_time": 2,
+        "estimate_delivery_date": "2017-08-15",
+        "code": 4014,
+        "weight": 2,
+        "service": {
+            "name": "sedex",
+            "optional_name": "Sedex"
+        }
+    },
+    {
+        "price": 25.8,
+        "delivery_time": 5,
+        "estimate_delivery_date": "2017-08-18",
+        "code": 4510,
+        "weight": 2,
+        "service": {
+            "name": "pac",
+            "optional_name": "PAC"
+        }
+    }
+]
+```
+
 ##### Rastrear objetos
 
 ```php
@@ -72,7 +101,7 @@ try
 }
 ```
 
-Its output would be:
+Output:
 
 ```php
 {

@@ -299,8 +299,8 @@ class CorreiosQuote
 					  'delivery_time' => (int) $quote['PrazoEntrega'],
 					  'estimate_delivery_date' => Carbon::now()->addWeekdays($quote['PrazoEntrega'])->format('Y-m-d'),
 					  'code' => $quote['Codigo'],
+					  'weight' => $this->getWeight(),
 					  'service' => $this->getCorreiosServicesCodes()[$quote['Codigo']],
-					  'weight' => $this->getWeight()
 					]);
 				}
 				else
