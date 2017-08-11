@@ -36,6 +36,7 @@ try
 {
     echo $e->getMessage();
 }
+```
 
 Its output would be:
 
