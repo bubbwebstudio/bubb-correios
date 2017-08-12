@@ -39,12 +39,12 @@ class CorreiosTracking
 			$crawler = $client->request('GET', self::TRACKING_URL.'/'.$this->getTrackingCode());
 			$arr = [];
 
-			$crawler->filter('div#conteudo')->each(function ($node) use($collection, &$arr)
+			$crawler->filter('div#conteudo')->each(function ($node) use(&$arr)
 			{
 			  
 			  $lastDate = null;
 
-			  $node->filter('table > tbody > tr')->each(function ($n, $key) use($collection, &$arr, &$lastDate)
+			  $node->filter('table > tbody > tr')->each(function ($n, $key) use(&$arr, &$lastDate)
 			    { 
 
 			      $date = $n->filter('td[rowspan="2"]');
@@ -90,6 +90,9 @@ class CorreiosTracking
 		            'delivered' => $key['status'] == 'Entrega Efetuada'
 		        ];
 		    }, $tracking);
+
+			if ( !isset($trackingObject[0]) )
+				throw new CorreiosTrackingException('Tracking code not found');
 
 			$firstTrackingObject = $trackingObject[0];
 

@@ -4,7 +4,7 @@ namespace BUBB\Correios\Exceptions;
 
 use Exception;
 
-class InstallmentsException extends Exception
+class CorreiosTrackingException extends Exception
 {
 
 	public function __construct($message)
