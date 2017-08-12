@@ -332,6 +332,9 @@ class CorreiosQuote
 	{
 		$has = false;
 
+		if ( !is_array($this->getServicesCodes()) )
+			throw new CorreiosQuoteException('Services codes must be an array');
+			
 		foreach ( $this->getServicesCodes() as $key => $code )
 		{
 			if ( !isset($this->getCorreiosServicesCodes()[$code]) )
