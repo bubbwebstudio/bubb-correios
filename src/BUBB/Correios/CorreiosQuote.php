@@ -186,7 +186,7 @@ class CorreiosQuote
 		return $this->password = $value;
 	}
 
-	public function getPassword($value)
+	public function getPassword()
 	{
 		return $this->password;
 	}
