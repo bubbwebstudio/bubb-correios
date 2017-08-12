@@ -196,7 +196,7 @@ class CorreiosQuote
 		return $this->diameter = $value;
 	}
 
-	public function getDiameter($value)
+	public function getDiameter()
 	{
 		return $this->diameter;
 	}
