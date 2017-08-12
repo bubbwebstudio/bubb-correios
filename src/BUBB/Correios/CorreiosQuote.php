@@ -269,9 +269,9 @@ class CorreiosQuote
 
 		$soapOptions = [
 			'trace'              => true,
-	        'exceptions'         => true,
-	        'compression'        => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP,
-	        'connection_timeout' => 1000
+			'exceptions'         => true,
+			'compression'        => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP,
+			'connection_timeout' => 1000
 		];
 
 		try

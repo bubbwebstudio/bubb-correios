@@ -8,7 +8,6 @@
         "guzzlehttp/guzzle": "~6.0",
         "fabpot/goutte": "^3.2",
         "nesbot/carbon": "^1.22",
-        "tightenco/collect": "^5.4",
         "larapack/dd": "^1.1"
     },
     "autoload": {

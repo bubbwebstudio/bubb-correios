@@ -76,21 +76,22 @@ class CorreiosTracking
 
 			});
 
-			$tracking = collect($arr)->values()->all();
+			$tracking = array_values($arr);
 
-			$trackingObject = collect(array_map(function ($key)
-			    {
-			        return [
-			            'timestamp' => Carbon::createFromFormat('d/m/Y H:i', $key['date'])->timestamp,
-			            'date' => Carbon::createFromFormat('d/m/Y H:i', $key['date'])->format('Y-m-d H:i'),
-			            'locale' => $key['locale'],
-			            'status' => $key['status'],
-			            'forwarded' => isset($key['encaminhado']) ? $key['encaminhado'] : null,
-			            'delivered' => $key['status'] == 'Entrega Efetuada'
-			        ];
-			    }, $tracking));
+			$trackingObject = array_map(function ($key)
+		    {
 
-			$firstTrackingObject = $trackingObject->first();
+		        return [
+		            'timestamp' => Carbon::createFromFormat('d/m/Y H:i', $key['date'])->timestamp,
+		            'date' => Carbon::createFromFormat('d/m/Y H:i', $key['date'])->format('Y-m-d H:i'),
+		            'locale' => $key['locale'],
+		            'status' => $key['status'],
+		            'forwarded' => isset($key['encaminhado']) ? $key['encaminhado'] : null,
+		            'delivered' => $key['status'] == 'Entrega Efetuada'
+		        ];
+		    }, $tracking);
+
+			$firstTrackingObject = $trackingObject[0];
 
 			return array_merge(
 			    ['code' => $this->getTrackingCode()],
