@@ -292,7 +292,7 @@ class CorreiosQuote
 
 				$quote = (array) $quote;
 
-				if ( (int) $quote['Erro'] > 0 )
+				if ( (int) $quote['Erro'] >= 0 )
 				{
 					array_push($quotes, [
 					  'price' => (float) str_replace(',','.', $quote['Valor']),
