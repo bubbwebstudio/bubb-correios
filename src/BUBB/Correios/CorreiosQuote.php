@@ -287,15 +287,25 @@ class CorreiosQuote
 
 			$quotes = [];
 
+			$acceptedErrorsCodes = ['009', '010', '011'];
+
 			foreach ( $result as $quote )
 			{
 
 				$quote = (array) $quote;
+				$validQuote = true;
+				$price = (float) str_replace(',','.', $quote['Valor']);
 
-				if ( (int) $quote['Erro'] >= 0 )
+				if ( !empty($quote['Erro']) )
+				{
+				  if ( !in_array($quote['Erro'], $acceptedErrorsCodes) )
+				    $validQuote = false;
+				}
+
+				if ( $validQuote && $price > 0 )
 				{
 					array_push($quotes, [
-					  'price' => (float) str_replace(',','.', $quote['Valor']),
+					  'price' => $price,
 					  'delivery_days' => (int) $quote['PrazoEntrega'],
 					  'estimate_delivery_date' => Carbon::now()->addWeekdays($quote['PrazoEntrega'])->format('Y-m-d'),
 					  'code' => $quote['Codigo'],
