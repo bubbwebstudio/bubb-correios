@@ -87,7 +87,7 @@ class CorreiosTracking
 		            'locale' => $key['locale'],
 		            'status' => $key['status'],
 		            'forwarded' => isset($key['encaminhado']) ? $key['encaminhado'] : null,
-		            'delivered' => $key['status'] == 'Entrega Efetuada'
+		            'delivered' => $key['status'] == 'Entrega Efetuada' || $key['status'] == 'Objeto entregue ao destinatário'
 		        ];
 		    }, $tracking);
 
