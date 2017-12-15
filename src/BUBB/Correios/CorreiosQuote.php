@@ -63,7 +63,8 @@ class CorreiosQuote
 
 	public function setValorDeclarado($value)
 	{
-		return $this->valorDeclarado = $value;
+		$this->valorDeclarado = $value;
+		return $this;
 	}
 
 	public function getValorDeclarado()
@@ -73,7 +74,8 @@ class CorreiosQuote
 
 	public function setAvisoRecebimento($value)
 	{
-		return $this->avisoRecebimento = $value;
+		$this->avisoRecebimento = $value;
+		return $this;
 	}
 
 	public function getAvisoRecebimento()
@@ -83,7 +85,8 @@ class CorreiosQuote
 
 	public function setOriginZipcode($value)
 	{
-		return $this->originZipcode = $value;
+		$this->originZipcode = $value;
+		return $this;
 	}
 
 	public function getOriginZipcode()
@@ -93,7 +96,8 @@ class CorreiosQuote
 
 	public function setDestinyZipcode($value)
 	{
-		return $this->destinyZipcode = $value;
+		$this->destinyZipcode = $value;
+		return $this;
 	}
 
 	public function getDestinyZipcode()
@@ -103,7 +107,8 @@ class CorreiosQuote
 
 	public function setWeight($value)
 	{
-		return $this->weight = $value;
+		$this->weight = $value;
+		return $this;
 	}
 
 	public function getWeight()
@@ -113,7 +118,8 @@ class CorreiosQuote
 
 	public function setMaoPropria($value)
 	{
-		return $this->maoPropria = $value;
+		$this->maoPropria = $value;
+		return $this;
 	}
 
 	public function getMaoPropria()
@@ -123,7 +129,8 @@ class CorreiosQuote
 
 	public function setWidth($value)
 	{
-		return $this->width = $value;
+		$this->width = $value;
+		return $this;
 	}
 
 	public function getWidth()
@@ -133,7 +140,8 @@ class CorreiosQuote
 
 	public function setHeight($value)
 	{
-		return $this->height = $value;
+		$this->height = $value;
+		return $this;
 	}
 
 	public function getHeight()
@@ -143,7 +151,8 @@ class CorreiosQuote
 
 	public function setLength($value)
 	{
-		return $this->length = $value;
+		$this->length = $value;
+		return $this;
 	}
 
 	public function getLength()
@@ -153,7 +162,8 @@ class CorreiosQuote
 
 	public function setServicesCodes($value)
 	{
-		return $this->servicesCodes = $value;
+		$this->servicesCodes = $value;
+		return $this;
 	}
 
 	public function getServicesCodes()
@@ -163,7 +173,8 @@ class CorreiosQuote
 
 	public function setFormat($value)
 	{
-		return $this->format = $value;
+		$this->format = $value;
+		return $this;
 	}
 
 	public function getFormat()
@@ -173,7 +184,8 @@ class CorreiosQuote
 
 	public function setCompanyCode($value)
 	{
-		return $this->companyCode = $value;
+		$this->companyCode = $value;
+		return $this;
 	}
 
 	public function getCompanyCode()
@@ -183,7 +195,8 @@ class CorreiosQuote
 
 	public function setPassword($value)
 	{
-		return $this->password = $value;
+		$this->password = $value;
+		return $this;
 	}
 
 	public function getPassword()
@@ -193,7 +206,8 @@ class CorreiosQuote
 
 	public function setDiameter($value)
 	{
-		return $this->diameter = $value;
+		$this->diameter = $value;
+		return $this;
 	}
 
 	public function getDiameter()

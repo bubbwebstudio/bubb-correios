@@ -32,20 +32,20 @@ try
     $quotes = new CorreiosQuote();
 
     $quotes->setOriginZipcode('14940-000');
-    $quotes->setDestinyZipcode('14900-000');
-    $quotes->setWeight(2);
-    $quotes->setWidth(15);
-    $quotes->setHeight(10);
-    $quotes->setLength(16);
-    $quotes->setServicesCodes(['4014', '4510']);
-    $quotes->setFormat('caixa');
+            ->setDestinyZipcode('14900-000');
+            ->setWeight(2);
+            ->setWidth(15);
+            ->setHeight(10);
+            ->setLength(16);
+            ->setServicesCodes(['4014', '4510']);
+            ->setFormat('caixa');
 
     // Métodos opcionais
     $quotes->setCompanyCode('00000000'); // Código da empresa
-    $quotes->setPassword('00000000'); // Senha webserivce
-    $quotes->setDiameter(0);
-    $quotes->setMaoPropria(true);
-    $quotes->setValorDeclarado(12.0);
+            ->setPassword('00000000'); // Senha webserivce
+            ->setDiameter(0);
+            ->setMaoPropria(true);
+            ->setValorDeclarado(12.0);
 
     echo '<pre>' . json_encode($quotes->get(), true) . '</pre>';
 
@@ -138,5 +138,34 @@ Output:
             "delivered": false
         }
     ]
+}
+```
+
+##### Consultar CEP
+
+```php
+use BUBB\Correios\Zipcode;
+use BUBB\Correios\Exceptions\ZipcodeException;
+
+try
+{
+    $zipcode = new Zipcode('14940000');
+    echo '<pre>' . json_encode($zipcode->get(), true) . '</pre>';
+
+} catch ( ZipcodeException $e )
+{
+    echo $e->getMessage();
+}
+```
+
+Output:
+
+```json
+{
+    "zipcode": "14940000",
+    "street": "",
+    "neighborhood": "",
+    "city": "Ibitinga",
+    "state": "SP"
 }
 ```
