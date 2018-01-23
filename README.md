@@ -1,4 +1,6 @@
 
+# Essa lib foi migrada para o repositório [bubbstore/correios](https://github.com/bubbstore/correios)
+
 # bubb-correios
 
 Com esta biblioteca você consegue calcular valores/prazos e rastrear objetos diretamente do webservice dos Correios.
